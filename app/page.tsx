@@ -1,3 +1,5 @@
+import { Blocks } from "lucide-react";
+
 const jobs = [
   {
     title: 'Dayton Financial - Quoting System',
@@ -33,16 +35,19 @@ export default function Home() {
           </div>
         </main>
         <div className="text-center p-20">
-          <h1 className="italic text-2xl py-6 font-medium text-center">We Build Smart Software</h1>
-          <p className="">From complex workflows to real-time apps<br/> we turn your ideas into reliable systems. </p>
+          <div className="flex justify-center items-center">
+            <Blocks className="mb-1 mr-3 w-12 h-12" />
+            <h1 className="italic text-4xl py-6 font-medium text-center">We Build Smart Software</h1>
+          </div>
+          <p className="">From complex workflows to real-time apps<br /> we turn your ideas into reliable systems. </p>
         </div>
         {/* <h1 className="text-2xl text-center">N&M Labs</h1> */}
         <ul>
           {jobs.map(job =>
-            (<li key={job.title} className="my-3">
-              <h3 className="text-lg font-semibold">{job.title}</h3>
-              <p className="p-2">{job.desc}</p>
-            </li>)
+          (<li key={job.title} className="my-3">
+            <h3 className="text-lg font-semibold">{job.title}</h3>
+            <p className="p-2">{job.desc}</p>
+          </li>)
           )
           }
         </ul>
